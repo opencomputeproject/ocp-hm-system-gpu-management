@@ -30,7 +30,7 @@ License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 # Scope
 
-This document specifies the requirement for managing a GPU in a system.
+This document specifies the requirements for managing a GPU in a system.
 
 # Requirements
 
@@ -50,11 +50,11 @@ The system should follow the guidance of the *(insert document name*)
 
 # Testing Conformance to Profiles
 
-A profile is read by the Redfish Interop Validator which autogenerates and executes the tests against an implementation.  The Interop Validator generates a test report – in text or HTML format.
+The [Redfish Interop Validator](https://github.com/DMTF/Redfish-Interop-Validator) reads a profile. The validator autogenerates tests, executes the tests against an implementation, and generated a report.  The validator is invoked the the following command.
 
   \$\> python3 RedfishInteropValidator.py profileName --ip host:port
 
-The [Redfish Interop Validator](https://github.com/DMTF/Redfish-Interop-Validator) is open source)
+
 
 # Revision 
 
