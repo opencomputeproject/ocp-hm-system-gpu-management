@@ -36,17 +36,31 @@ This document specifies the requirements for managing a GPU in a system.
 
 ## Manageability Interface
 
-The system shall expose a Redfish-based interface (v??).
+The system shall expose a Redfish Service (v??).
 
 ## Redfish data model
 
-The Redfish interface shall conform to the following OCP Profiles
+The Redfish Service shall conform to the following OCP Profiles
 * [UBB_BaselineManagement profile v1.x](https://github.com/opencomputeproject/HWMgmt-OCP-Profiles/blob/master/gpu/OCP_UBB_BaselineManagement.v1.0.0.json)
 * [OCP Server Profile v1.1](https://github.com/opencomputeproject/HWMgmt-OCP-Profiles/blob/master/Server/OCPServerHardwareManagement.v1_1_0.json)
 
-## Aggregation Behavior
+### Firmware Management
+### Redfish Component Integrity
 
-The system should follow the guidance of the *(insert document name*)
+## Redfish Aggregation Behavior
+
+The system should follow the guidance of the *(insert document name*) (GPU specific version)
+
+## Redfish Message Registry
+
+# PLDM Requirements
+
+# Security Requirements (SPDM)
+
+# Physical Interfaces and connections
+## USB Requirements
+
+# Performance requirements (e.g. KPIs)
 
 # Testing Conformance to Profiles
 
