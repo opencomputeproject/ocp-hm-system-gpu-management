@@ -89,6 +89,8 @@ The GPU shall support the requirements specified in the "GPU Firmware Update Req
 
 The CPU shall support the requirements specified in ...
 
+## Sensors and Effecters
+
 # Security Requirements (SPDM)
 
 # Physical Interfaces and connections
