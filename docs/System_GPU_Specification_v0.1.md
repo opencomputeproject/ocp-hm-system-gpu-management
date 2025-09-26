@@ -36,17 +36,24 @@ This document specifies the requirements for managing a GPU in a system.
 
 Within the document, system shall be an entity which is:
 
-* Bounded by a platform or chassis
+* Bounded by a physical chassis
 * Exposes an out-of-band remote manageability interface is Redfish over Ethernet
-* Contains one or more GPUs
 
-The system is the foundation of a datacenter manageament hierarchy, which might include the rack manager, row manager, and datacenter manager.
+* 
+* Shall contain one or more GPUs - which may be on a subsystem (UBB) or discrete
+* Use Redfish, PLDM and SPDM for local manageability
+* 
 
 The system:
 
 * Shall contain a power subsystem
-* May contain CPUs in addition to one or more GPUs
-* May contain a cooling subsystem
+* Shall contain compute complexes
+* Shall contain a cooling and thermal subsystem
+* May contain a management controller hierarchy
+
+The GPU system is the foundation of a datacenter manageament hierarchy, which might include the rack manager, row manager, and datacenter manager.
+
+** TBD - Are disaggregated GPU Systems included? - with GPU shelves, JBODs, etc**
 
 # Redfish Requirements
 
