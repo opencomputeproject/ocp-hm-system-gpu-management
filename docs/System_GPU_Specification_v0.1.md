@@ -32,11 +32,27 @@ License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 This document specifies the requirements for managing a GPU in a system.
 
-# Requirements
+## Scoping a GPU System
 
-## Manageability Interface
+Within the document, system shall be an entity which is:
 
-The system shall expose a Redfish Service (v??).
+* Bounded by a platform or chassis
+* Exposes an out-of-band remote manageability interface is Redfish over Ethernet
+* Contains one or more GPUs
+
+The system is the foundation of a datacenter manageament hierarchy, which might include the rack manager, row manager, and datacenter manager.
+
+The system:
+
+* Shall contain a power subsystem
+* May contain CPUs in addition to one or more GPUs
+* May contain a cooling subsystem
+
+# Redfish Requirements
+
+## Redfish Interface
+
+The Redfish interface should be Redfish Specification v1.22, [DSP0266](https://www.dmtf.org/dsp/DSP0266)
 
 ## Redfish data model
 
@@ -44,20 +60,32 @@ The Redfish Service shall conform to the following OCP Profiles
 * [UBB_BaselineManagement profile v1.x](https://github.com/opencomputeproject/HWMgmt-OCP-Profiles/blob/master/gpu/OCP_UBB_BaselineManagement.v1.0.0.json)
 * [OCP Server Profile v1.1](https://github.com/opencomputeproject/HWMgmt-OCP-Profiles/blob/master/Server/OCPServerHardwareManagement.v1_1_0.json)
 
-### Firmware Management
-### Redfish Component Integrity
+## Firmware Management
+
+The Redfish Service should support the MultipartHttpPushUri. If MultipartHttpPushUri property is not supported, then the HttpPushUri property shall be supported.
+
+*Note*: The HttpPushUri property is 'deprecated' in favor of the MultiPartHttpPushUri property.
+
+## Redfish Component Integrity
 
 ## Redfish Aggregation Behavior
 
-The system should follow the guidance of the *(insert document name*) (GPU specific version)
+The system is an assemblage of subsystems. In order to improve interoperablity, the Redfish data model of the the assemblage should be consistent . Hence, the guidance of the "Redfish Aggregation Guidance for Compute Expansion Modules", [DSP2090](https://www.dmtf.org/sites/default/files/standards/documents/DSP2090_1.0.0.pdf) should be followed.
 
 ## Redfish Message Registry
 
 # PLDM Requirements
 
+## Firmware Management
+
+The GPU shall support the requirements specified in the "GPU Firmware Update Requirements v1.1"
+
+The CPU shall support the requirements specified in ...
+
 # Security Requirements (SPDM)
 
 # Physical Interfaces and connections
+
 ## USB Requirements
 
 # Performance requirements (e.g. KPIs)
