@@ -6,8 +6,8 @@ supersedes: none
 status: draft
 released: true
 class: info
-date: 2025-09-12
-copyright: 2025
+date: 2026-01-12
+copyright: 2026
 paragraph_numbering: no
 bibliography: bibliography.yaml
 header-includes: |
@@ -34,10 +34,10 @@ This document specifies the requirements for managing a GPU in a system.
 
 ## Scoping a GPU System
 
-Within the document, system shall be an entity which is:
+Within the document, system shall be an entity:
 
 * Bounded by a platform or chassis
-* Exposes an out-of-band remote manageability interface is Redfish over Ethernet
+* Whose out-of-band remote manageability interface is Redfish over Ethernet
 * Contains one or more GPUs
 
 The system is the foundation of a datacenter manageament hierarchy, which might include the rack manager, row manager, and datacenter manager.
@@ -78,9 +78,9 @@ The system is an assemblage of subsystems. In order to improve interoperablity, 
 
 ## Firmware Management
 
-The GPU shall support the requirements specified in the "GPU Firmware Update Requirements v1.1"
+The GPU shall support the requirements specified in the ["GPU Firmware Update Requirements v1.1"](https://www.opencompute.org/documents/ocp-gpu-fw-update-specification-v1-1-pdf)
 
-The CPU shall support the requirements specified in ...
+The CPU shall support the requirements specified in the "CPU Hyperscale Impactless Firmware Update v1.0". The current draft is [v0.7](https://www.opencompute.org/documents/hyperscale-cpu-impactless-firmware-updates-requirements-specification-v0-7-9-29-2025-pdf) (2025).
 
 # Security Requirements (SPDM)
 
@@ -102,5 +102,5 @@ The [Redfish Interop Validator](https://github.com/DMTF/Redfish-Interop-Validato
 
 | Revision/Version | Date | Description |
 |----|----|----|
-| 0.1 | 9/12/2025 |initial draft |
+| 0.1 | 1/12/2026 |initial draft |
 
