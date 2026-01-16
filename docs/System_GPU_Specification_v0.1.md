@@ -40,13 +40,21 @@ Within the document, system shall be an entity:
 * Whose out-of-band remote manageability interface is Redfish over Ethernet
 * Contains one or more GPUs
 
-The system is the foundation of a datacenter manageament hierarchy, which might include the rack manager, row manager, and datacenter manager.
+* 
+* Shall contain one or more GPUs - which may be on a subsystem (UBB) or discrete
+* Use Redfish, PLDM and SPDM for local manageability
+* 
 
 The system:
 
 * Shall contain a power subsystem
-* May contain CPUs in addition to one or more GPUs
-* May contain a cooling subsystem
+* Shall contain compute complexes
+* Shall contain a cooling and thermal subsystem
+* May contain a management controller hierarchy
+
+The GPU system is the foundation of a datacenter manageament hierarchy, which might include the rack manager, row manager, and datacenter manager.
+
+** TBD - Are disaggregated GPU Systems included? - with GPU shelves, JBODs, etc**
 
 # Redfish Requirements
 
@@ -81,6 +89,8 @@ The system is an assemblage of subsystems. In order to improve interoperablity, 
 The GPU shall support the requirements specified in the ["GPU Firmware Update Requirements v1.1"](https://www.opencompute.org/documents/ocp-gpu-fw-update-specification-v1-1-pdf)
 
 The CPU shall support the requirements specified in the "CPU Hyperscale Impactless Firmware Update v1.0". The current draft is [v0.7](https://www.opencompute.org/documents/hyperscale-cpu-impactless-firmware-updates-requirements-specification-v0-7-9-29-2025-pdf) (2025).
+
+## Sensors and Effecters
 
 # Security Requirements (SPDM)
 
