@@ -42,25 +42,6 @@ Both documents describe the possible management hierarchy (from node, to rack, t
 
 At the top level of the Redfish model [7], there exista the the 'System' resource and the 'Chassis' resource to represent the functional and physical aspects of a managed entity, respectively.    The model also contains  'Manager' resource to represent the management hierarchy of a managed entity. *TODO - add high level diagram*.
 
-has as phA GPU System is describe phyiscally as a pod, the functional aspect is termed a cluster.Within the document, system shall be an entity:
-
-* Bounded by a platform or chassis
-* Whose out-of-band remote manageability interface is Redfish over Ethernet
-* Contains one or more GPUs
-
-* 
-* Shall contain one or more GPUs - which may be on a subsystem (UBB) or discrete
-* Use Redfish, PLDM and SPDM for local manageability
-* 
-
-The system:
-
-* Shall contain a power subsystem
-* Shall contain compute complexes
-* Shall contain a cooling and thermal subsystem
-* May contain a management controller hierarchy
-
-The GPU system is the foundation of a datacenter manageament hierarchy, which might include the rack manager, row manager, and datacenter manager.
 
 ** TBD - Are disaggregated GPU Systems included? - with GPU shelves, JBODs, etc**
 
