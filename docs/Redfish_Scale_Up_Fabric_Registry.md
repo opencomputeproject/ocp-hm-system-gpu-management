@@ -27,7 +27,7 @@ This document defines the Redfish Message Registry for Scale Up Fabric managemen
 
 | MessageId | Severity | Message |
 | :-------- | :------- | :------ |
-| `AcceleratorFabric.1.0.0.ConnectionDropped` | OK | The connection is no longer active for accelerator '\<Arg1\>' port '\<Arg2\>' function '\<Arg3\>'. |
+| `AcceleratorFabric.1.0.0.ConnectionDropped` | OK | This is no longer active for accelerator '\<Arg1\>' port '\<Arg2\>' function '\<Arg3\>'. |
 | `AcceleratorFabric.1.0.0.ConnectionEstablished` | OK | A connection was established for accelerator '\<Arg1\>' port '\<Arg2\>'. |
 | `AcceleratorFabric.1.0.0.ConnectionSpeedLow` | Warning | The accelerator '\<Arg1\>' port '\<Arg2\>' is operating at a link speed of '\<Arg3\>' Gbps which is below the specified threshold of '\<Arg4\>' Gbps. |
 | `AcceleratorFabric.1.0.0.DegradedConnectionEstablished` | Warning | A degraded connection was established for accelerator '\<Arg1\>' port '\<Arg2\>'. |
