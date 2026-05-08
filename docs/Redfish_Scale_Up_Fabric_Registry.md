@@ -20,44 +20,44 @@ This document defines the Redfish Message Registry for Scale Up Fabric managemen
 
 | MessageId | Severity | Message |
 | :-------- | :------- | :------ |
-| `AcceleratorFabric.1.0.0.CableInserted` | OK | A network cable was inserted into accelerator '\<Arg1\>' port '\<Arg2\>'. |
-| `AcceleratorFabric.1.0.0.CableRemoved` | OK | A cable was removed from accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `CableInserted` | OK | A network cable was inserted into accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `CableRemoved`  | OK | A cable was removed from accelerator '\<Arg1\>' port '\<Arg2\>'. |
 
 ### Link Establishment
 
 | MessageId | Severity | Message |
 | :-------- | :------- | :------ |
-| `AcceleratorFabric.1.0.0.ConnectionDropped` | OK | The connection is no longer active for accelerator '\<Arg1\>' port '\<Arg2\>' function '\<Arg3\>'. |
-| `AcceleratorFabric.1.0.0.ConnectionEstablished` | OK | A connection was established for accelerator '\<Arg1\>' port '\<Arg2\>'. |
-| `AcceleratorFabric.1.0.0.ConnectionSpeedLow` | Warning | The accelerator '\<Arg1\>' port '\<Arg2\>' is operating at a link speed of '\<Arg3\>' Gbps which is below the specified threshold of '\<Arg4\>' Gbps. |
-| `AcceleratorFabric.1.0.0.DegradedConnectionEstablished` | Warning | A degraded connection was established for accelerator '\<Arg1\>' port '\<Arg2\>'. |
-| `AcceleratorFabric.1.0.0.LinkTrainingStarted` | OK | Link training has started for accelerator '\<Arg1\>' port '\<Arg2\>'. |
-| `AcceleratorFabric.1.0.0.LinkTrainingSucceeded` | OK | Link training succeeded for accelerator '\<Arg1\>' port '\<Arg2\>'. |
-| `AcceleratorFabric.1.0.0.LinkTrainingFailed` | Critical | Link training failed for accelerator '\<Arg1\>' port '\<Arg2\>'. |
-| `AcceleratorFabric.1.0.0.LinkRetrained` | OK | Link was retrained for accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `ConnectionDropped`     | OK       | The connection is no longer active for accelerator '\<Arg1\>' port '\<Arg2\>' function '\<Arg3\>'. |
+| `ConnectionEstablished` | OK       | A connection was established for accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `ConnectionSpeedLow`    | Warning  | The accelerator '\<Arg1\>' port '\<Arg2\>' is operating at a link speed of '\<Arg3\>' Gbps which is below the specified threshold of '\<Arg4\>' Gbps. |
+| `DegradedConnectionEstablished`    | Warning | A degraded connection was established for accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `LinkTrainingStarted`   | OK       | Link training has started for accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `LinkTrainingSucceeded` | OK       | Link training succeeded for accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `LinkTrainingFailed`    | Critical | Link training failed for accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `LinkRetrained`         | OK       | Link was retrained for accelerator '\<Arg1\>' port '\<Arg2\>'. |
 
 ### Link Health
 
 | MessageId | Severity | Message |
 | :-------- | :------- | :------ |
-| `AcceleratorFabric.1.0.0.LinkFlapDetected` | Warning | The connection for accelerator '\<Arg1\>' port '\<Arg2\>' was established and dropped '\<Arg3\>' times in the last '\<Arg4\>' minutes. |
-| `AcceleratorFabric.1.0.0.PortCongestionDetected` | Warning | Port congestion detected on accelerator '\<Arg1\>' port '\<Arg2\>'. |
-| `AcceleratorFabric.1.0.0.PortCongestionCleared` | OK | Port congestion for accelerator '\<Arg1\>' port '\<Arg2\>' is cleared. |
-| `AcceleratorFabric.1.0.0.PacketDropRateAboveCautionThreshold` | Warning | Packet Drop rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
-| `AcceleratorFabric.1.0.0.PacketDropRateAboveCriticalThreshold` | Critical | Packet Drop rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' critical threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
-| `AcceleratorFabric.1.0.0.PacketDropRateCautionThresholdCleared` | OK | Packet Drop rate '\<Arg1\>' is below the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
-| `AcceleratorFabric.1.0.0.RetryRateAboveCautionThreshold` | Warning | Retry rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
-| `AcceleratorFabric.1.0.0.RetryRateAboveCriticalThreshold` | Critical | Retry rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' critical threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
-| `AcceleratorFabric.1.0.0.RetryRateCautionThresholdCleared` | OK | Retry rate '\<Arg1\>' is below the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
-| `AcceleratorFabric.1.0.0.ErrorCorrectionRateAboveCautionThreshold` | Warning | Error correction rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
-| `AcceleratorFabric.1.0.0.ErrorCorrectionRateAboveCriticalThreshold` | Critical | Error correction rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' critical threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
-| `AcceleratorFabric.1.0.0.ErrorCorrectionRateCautionThresholdCleared` | OK | Error correction rate '\<Arg1\>' is below the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `LinkFlapDetected`                           | Warning | The connection for accelerator '\<Arg1\>' port '\<Arg2\>' was established and dropped '\<Arg3\>' times in the last '\<Arg4\>' minutes. |
+| `PortCongestionDetected`                     | Warning | Port congestion detected on accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `PortCongestionCleared`                      | OK | Port congestion for accelerator '\<Arg1\>' port '\<Arg2\>' is cleared. |
+| `PacketDropRateAboveCautionThreshold`        | Warning | Packet Drop rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `PacketDropRateAboveCriticalThreshold`       | Critical | Packet Drop rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' critical threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `PacketDropRateCautionThresholdCleared`      | OK | Packet Drop rate '\<Arg1\>' is below the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `RetryRateAboveCautionThreshold`             | Warning | Retry rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `RetryRateAboveCriticalThreshold`            | Critical | Retry rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' critical threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `RetryRateCautionThresholdCleared`           | OK | Retry rate '\<Arg1\>' is below the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `ErrorCorrectionRateAboveCautionThreshold`   | Warning | Error correction rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `ErrorCorrectionRateAboveCriticalThreshold`  | Critical | Error correction rate '\<Arg1\>' is above the '\<Arg2\>' per '\<Arg3\>' critical threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
+| `ErrorCorrectionRateCautionThresholdCleared` | OK | Error correction rate '\<Arg1\>' is below the '\<Arg2\>' per '\<Arg3\>' caution threshold for accelerator '\<Arg4\>' port '\<Arg5\>'. |
 
 ### Port
 
 | MessageId | Severity | Message |
 | :-------- | :------- | :------ |
-| `AcceleratorFabric.1.0.0.PortConfigChanged` | OK | The port configuration has changed for accelerator '\<Arg1\>' port '\<Arg2\>'. |
+| `PortConfigChanged` | OK | The port configuration has changed for accelerator '\<Arg1\>' port '\<Arg2\>'. |
 
 ## Open Issues
 
