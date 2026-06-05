@@ -63,23 +63,29 @@ The section specifies the interfaces for managing both Discrete and UUB design G
 ### 2.1 Discrete Accelerator Devices Manageability
 Discrete accelerator devices are GPUs packaged as standard CEM form-factor PCI-e adapters. Discrete accelerator device management can be broken down into several categories, each of which tie-in to various industry standards.
 
-#### Table 1 – DMTF Standard Protocols (normative mapping)
+#### Table 1 - DMTF Standard Protocols (normative mapping)
 Implementations **SHALL** support the protocols indicated for each manageability objective.
 
-| Manageability Objective | Technology | Standard |
+| Manageability Objective            | Technology   | Standard |
 |---|---|---|
-| Static discovery | IPMI FRU | Platform Management FRU Information Storage Definition (rev. 1.3) |
-| Transport protocol | MCTP | DMTF DSP0236 revision 1.3.1 or later |
-| Attestation | SPDM | DMTF DSP0274 revision 1.2.1 or later |
-| Management capability discovery | PLDM Type 0 | DMTF DSP0240 revision 1.1.0 or later |
-| Base monitoring and control | PLDM Type 2 | DMTF DSP0248 revision 1.2.2 or later |
-| Accelerator monitoring and control | PLDM Type 2 | DMTF DSP2061 revision 1.0 |
-| Firmware management | PLDM Type 5 | DMTF DSP0267 revision 1.2.0 or later |
-| File I/O | PLDM Type (Future/TBD) | DMTF DSP0242 |
-| PLDM Set State | PLDM | DSP0249 revision 1.1.0 |
+| Static discovery                   | IPMI FRU     | Platform Management FRU Information Storage Definition (rev. 1.3) |
+| Transport protocol                 | MCTP         | DMTF DSP0236 revision 1.3.1 or later |
+| Attestation                        | SPDM         | DMTF DSP0274 revision 1.2.1 or later |
+| Management capability discovery    | PLDM Type 0  | DMTF DSP0240 revision 1.1.0 or later |
+| Base monitoring and control        | PLDM Type 2  | DMTF DSP0248 revision 1.2.2 or later |
+| Accelerator monitoring and control | PLDM Type 2  | DMTF DSP2061 revision 1.0 |
+| Firmware management                | PLDM Type 5  | DMTF DSP0267 revision 1.2.0 or later |
+| File I/O | PLDM Type (Future/TBD)  | DMTF DSP0242 |
+| PLDM Set State                     | PLDM         | DSP0249 revision 1.1.0 |
 
 #### 2.1.1 Static discovery
-The initial, static discovery of devices seeks to obtain primarily immutable information about the discrete accelerator device. This is done by reading the values from a dedicated FRU component (e.g. EEPROM) contained within the device.
+The initial, static discovery of devices seeks to obtain primarily immutable information about the discrete accelerator device. This is done by reading the values from a dedicated FRU component (e.g. EEPROM) contained within the device.  
+
+The format of the FRU data and the mechanism to retrieve the FRU data are in transition.  This transition is caused by the rollover of the ManufDate field in IPMI FRU format in Nov 2027.  DMTF has released an PLDM FRU Data Format which is backward compatable to the IPMI FRU Data format.
+
+* The device shall be accessible over I2C to provide the IPMI FRU Data (backward compatibility)
+* The device shall be accessible over I2C to provide the IPMI FRU Data with multi-record pointer to PLDM FRU Data (DSP0220)
+* The device should support PLDM Type 4 v2.0 to provide PLDM FRU Data
 
 #### 2.1.2 Transport Protocol
 MCTP is the media independent protocol for communication among management controllers within the system. The corresponding section below describes the Bus owner relationship, the endpoint discovery, EID assignment, the bridges, and the EID pool assignments and corresponding flows.
