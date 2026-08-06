@@ -72,26 +72,20 @@ The Platform Level Data Model (PLDM) for FRU Data Specification (DSP0257), a.k.a
 
 The IPMI section, if present, still carries the wrap-prone 3-byte minutes-from-1996 Mfg Date and requires the openBMC workaround. The DSP0220-native section carries the Manufacture Date as a wrap-safe `timestamp104` (full year). Under the co-existence layout both representations can be stored. The legacy IPMI section is retained only for backward compatibility. 
 
-## 4. System GPU management WG Options
+## 4. System GPU management WG potential recommendation.
 
-## 4.1 Deprecate IPMB commands
+## 4.1 Mandate Type 4 and/or IPMI FRU.
 
-The requirements for this option are:
+The goal of this recommendation is to prepare for a future transition away from IPMI and I2C but allow for the use IPMI FRU using I2C in the near term for backward compatibility.
+
+The Device side requirements are
 1. Shall enforce the co-existence layout to maintain compatibility with the IPMI FRU format.
-2. May retain hardware backward compatibility via I2C, assuming I2C is not directly routed to the EEPROM.
-3. Shall explicitly deprecate the IPMB commands, breaking firmware compatibility.
-
-The biggest reason to pick this option is to allow the future disentangling of the FRU dependency on I2C while still maintaining compatibility with the IPMI FRU format. The concern here is that it assumes the BMC does not have direct access to the EEPROM FRU in the GPU context.
-
-
-## 4.2 Allow GPUs to support IPMB commands.
-
-The requirements for this option are:
-1. Shall enforce the co-existence layout to maintain compatibility with the IPMI FRU format.
-2. GPUs shall support PLDM Type 4 commands.
-3. Optionally, GPUs may support older BMCs that use only IPMB commands which mandate i2c support.
-
-The biggest reason to pick this option is to allow GPUs to support older BMCs wihtout firmware update. But it forces a continued reliance on a spec that is no longer being maintained and which requires workarounds.
+2. Shall set the MFG date in the IPMI section to 0 forcing the use of DSP0220 records for MFG date post Nov, 2027.
+3. Shall enforce PCIe base spec requirments on FRU information device
+4. Shall deprecate IPMB commands
+5. Should use the i2c hardware address between 0x50 and 0x57 for the eeprom (or emulated eeprom)
+6. May support FRU update as a part of firmware update.
+7. May support SetFRUrecordTable command for FRU update.
 
 ## 5. References
 
