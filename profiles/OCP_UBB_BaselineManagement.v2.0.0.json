@@ -1,9 +1,10 @@
 {
   "SchemaDefinition": "RedfishInteroperabilityProfile.v1_6_0",
   "ProfileName": "OCP_UBB_BaselineManagement",
-  "ProfileVersion": "1.1.0",
-  "Purpose": "Specifies the OCP baseline hardware management requirements for the Redfish interface for GPU based Universal BaseBoard (UBB) platforms.",
+  "ProfileVersion": "2.0.0",
+  "Purpose": "Specifies the baseline manageability requirements GPU-based Universal BaseBoard (UBB).",
   "OwningEntity": "Open Compute Project",
+  "ContactInfo": "https://github.com/opencomputeproject/ocp-hm-system-gpu-management",
   "License": "Creative Commons Attribution-ShareAlike 4.0 International License",
   "Protocol": {
     "MinVersion": "1.0"
@@ -903,47 +904,32 @@
       }
     },
     "UpdateService": {
-      "MinVersion": "1.0.0",
-      "ReadRequirement": "Mandatory",
-      "PropertyRequirements": {
-        "FirmwareInventory": {
-          "ReadRequirement": "Mandatory"
+        "MinVersion": "1.6.0",
+        "ReadRequirement": "Mandatory",
+        "PropertyRequirements": {
+            "FirmwareInventory": {
+                "ReadRequirement": "Mandatory"
+            },
+            "ServiceEnabled": {
+                "ReadRequirement": "Mandatory"
+            },
+            "SoftwareInventory": {
+                "ReadRequirement": "Mandatory"
+            },
+            "MultipartHttpPushUri": {}
         },
-        "HttpPushUri": {
-          "ReadRequirement": "IfImplemented"
-        },
-        "HttpPushUriOptions": {
-          "ReadRequirement": "IfImplemented",
-          "PropertyRequirements": {
-            "HttpPushUriApplyTime": {
-              "ReadRequirement": "Mandatory",
-              "PropertyRequirements": {
-                "ApplyTime": {
-                  "ReadRequirement": "Mandatory"
-                }
-              }
-            }
-          }
-        },
-        "ServiceEnabled": {
-          "ReadRequirement": "Mandatory"
-        },
-        "SoftwareInventory": {
-          "ReadRequirement": "Mandatory"
-        }
-      },
         "ActionRequirements": {
 			"SimpleUpdate": {
-					"ReadRequirement": "IfImplement",
-					"Purpose": "Minimal set to allow power on, off and reboot.",
-					"Parameters": {
-						"TransferProtocol": {
-							"ParameterValues": ["HTTP??"],
-							"ReadRequirement": "Mandatory"
-						}
+				"ReadRequirement": "IfImplement",
+				"Purpose": "Minimal set to allow power on, off and reboot.",
+				"Parameters": {
+					"TransferProtocol": {
+						"ParameterValues": ["HTTP??"],
+						"ReadRequirement": "Mandatory"
 					}
 				}
 			}
+		}
     }
   },
   "Registries": {
