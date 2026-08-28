@@ -32,7 +32,7 @@ This is a temporary, format-preserving workaround to ensure BMCs can obtain the 
 
 ## 3. DSP0220 - DMTF Field Replaceable Unit (FRU) Data Format Specification
 
-Given that IPMI FRU is no longer maintained, DMTF introduced DSP0220 as an extensible layout that enables a backward-compatible transition away from IPMI FRU over time. At a high level, DSP0220 defines a storage format that lets legacy IPMI FRU commands keep working while adding a new, more extensible format. The following section explains how this is achieved through the storage layout. The intent is to give older BMCs (using the OpenBMC workaround) that support only IPMI FRU a path to keep working unmodified, while at the same time adding support for newer BMC code that uses DSP0257 — allowing both to be served simultaneously by the GPU.
+Given that IPMI FRU is no longer maintained ([IPMI homepage](https://www.intel.com/content/www/us/en/products/docs/servers/ipmi/ipmi-home.html)), DMTF introduced DSP0220 as an extensible layout that enables a backward-compatible transition away from IPMI FRU over time. At a high level, DSP0220 defines a storage format that lets legacy IPMI FRU commands keep working while adding a new, more extensible format. The following section explains how this is achieved through the storage layout. The intent is to give older BMCs (using the OpenBMC workaround) that support only IPMI FRU a path to keep working unmodified, while at the same time adding support for newer BMC code that uses DSP0257 — allowing both to be served simultaneously by the GPU.
 
 ### 3.1 DSP0220 - Storage layout compatible with IPMI FRU
 
