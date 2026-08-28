@@ -63,7 +63,7 @@ flowchart TB
 
 The Platform Level Data Model (PLDM) for FRU Data Specification (DSP0257), a.k.a. PLDM Type 4, introduces a protocol for FRU access that is natively compatible with DSP0220 and does not mandate a co-existence layout. It adds new protocol commands such as **Get/Set FRURecordTable**, which aim to replace the corresponding IPMB commands **Read/Write FRU Data**. PLDM Type 4 has a number of intrinsic benefits over IPMB that are clearly documented in existing literature. Some of them are captured below.
 
-1. Enables bulk read/write using PLDM Type 7 (available with v2).
+1. Enables bulk read using PLDM Type 7 (available with v2).
 2. Replaces a stringent I2C requirement with a more flexible MCTP transport.
 3. Device firmware maintains compatibility with the IPMI FRU format by wrapping IPMI data fields into TLVs and disambiguating them using PLDM tags.
 4. Device firmware may also continue to support the legacy IPMB **Read/Write FRU Data** commands with no conflicts.
