@@ -4,7 +4,7 @@
 
 The IPMI Platform Management FRU Information Storage format encodes the Board-area **Mfg Date/Time** as a **3-byte (24-bit) little-endian count of minutes since 00:00 UTC on 1996-01-01** (the value `0x000000` means "unspecified").
 
-Because the field is only 24 bits wide, it overflows and wraps back to `0` after:
+The field is 24 bits wide, which will overflow on Nov 24, 2027. The overflow will cause the field to wrap back to `0`.
 
 ```
 2^24 - 1 = 16,777,215 minutes ≈ 31.9 years
