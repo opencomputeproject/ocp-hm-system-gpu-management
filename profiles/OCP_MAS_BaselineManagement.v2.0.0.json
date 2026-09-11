@@ -1,8 +1,8 @@
 {
   "SchemaDefinition": "RedfishInteroperabilityProfile.v1_6_0",
-  "ProfileName": "OCP_UBB_BaselineManagement",
+  "ProfileName": "OCP_MAS_BaselineManagement",
   "ProfileVersion": "2.0.0",
-  "Purpose": "Specifies the baseline manageability requirements GPU-based Universal BaseBoard (UBB).",
+  "Purpose": "Specifies the baseline manageability requirements GPU-based Managed Accelerator Subsystem (MAS).",
   "OwningEntity": "Open Compute Project",
   "ContactInfo": "https://github.com/opencomputeproject/ocp-hm-system-gpu-management",
   "License": "Creative Commons Attribution-ShareAlike 4.0 International License",
