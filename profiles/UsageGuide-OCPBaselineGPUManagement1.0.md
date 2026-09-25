@@ -1,7 +1,7 @@
 # Scope
 
 This document contains baseline requirements for the OCP GPU Universal Baseboard Management API v1.0.
-The baseline Universal Base Board management tasks set as a common set of manageability from which OCP UBB platforms can extend for specific usages.
+The baseline Universal Base Board management tasks set as a common set of manageability from which OCP MAS platforms can extend for specific usages.
 
 # Requirements
 
@@ -20,23 +20,21 @@ The Redfish Interop Validator is located at <https://github.com/DMTF/Redfish-Int
 
 # Overview
 
-## GPU Universal Base Board
+## GPU Managed Accelerator Subsystem
 
-- ["OCP HGX"](https://www.opencompute.org/documents/open-compute-specification-hgx-baseboard-contribution-r1-v0-1-pdf) defines the hardware for a UBB for GPUs
-- UBB can be described as tray which consists of base board and a set of OAM/high-speed with the necessary high-speed interconnect and other I/O devices  
-- As per OCP HGX, GPU UBBs contain an Accelerator Management Controller (AMC)
-- The UBB AMC is managed directly via Redfish interface to an enclosure management controller
+- A Managed Accelerator Subsystem (MAS) is a collection of accelerators and related components that are managed by an Accelerator Managemement Controller (AMC).
+- A ["Universal Base Board (UBB)"](https://www.opencompute.org/documents/open-compute-specification-hgx-baseboard-contribution-r1-v0-1-pdf) is one example of a Managed Accelerator Subsystem, but other MAS designs also exist.
+- The MAS AMC is managed directly via Redfish interface to an enclosure management controller
 
-![alt text](UBBOverview.png "UBB Overview")
+![alt text](MASOverview.png "MAS Overview")
 
-## List of Resources included in the Profile 
+## List of Resources included in the Profile
 
-![alt text](ResourcesList.png "UBB Management Redfish Resource List")
+![alt text](ResourcesList.png "MAS Management Redfish Resource List")
 
+## MAS Management Redfish Model
 
-## UBB Management Redfish Model
-
-![alt text](UBBManagementRedfishModel.png "UBB Management Redfish Model")
+![alt text](MASManagementRedfishModel.png "MAS Management Redfish Model")
 
 ## GPU Profile Use Cases
 
